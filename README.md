@@ -1,6 +1,6 @@
 # Manage landing page
 
-![](./preview.jpg)
+![](./public/preview.jpg)
 
 ### [Live Site](url)
 
@@ -25,7 +25,7 @@ Users should be able to:
 
 - [React](https://react.dev/) - JS library/Framework
 - [Sass](https://sass-lang.com/) - Styling
-- [Jest/React-testing-library] - Testing library
+- [Jest/React-testing-library](https://testing-library.com/docs/react-testing-library/intro/) - Testing library
 
 ## Author
 
