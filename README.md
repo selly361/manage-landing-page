@@ -21,7 +21,7 @@ Users should be able to:
   - The `input` field is empty
   - The email address is not formatted correctly
 
-### Built with
+## Built with
 
 - [React](https://react.dev/) - JS library/Framework
 - [Sass](https://sass-lang.com/) - Styling
