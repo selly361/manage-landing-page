@@ -7,7 +7,7 @@
 - [Manage landing page](#manage-landing-page)
   - [Live Site](#live-site)
   - [Overview](#overview)
-    - [Built with](#built-with)
+  - [Built with](#built-with)
   - [Author](#author)
 
 ## Overview
