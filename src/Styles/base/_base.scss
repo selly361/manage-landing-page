@@ -1,0 +1,42 @@
+@use "Styles/utilities" as *;
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    background: url("../../../public/images/bg-tablet-pattern.svg") 
+    top -240px right -150px no-repeat, $white;
+    padding: 0 165px;
+}
+
+h1 {
+    @include HeadingL;
+}
+
+h2 {
+    @include HeadingM;
+}
+
+h3 {
+    @include HeadingS;
+}
+
+h4,
+h5,
+h6 {
+    @include HeadingXS;
+}
+
+
+p {
+    @include ParagraphM;
+}
+
+
+@include breakpoint(md) {
+    body {
+        background: url("../../../public/images/bg-tablet-pattern.svg") 
+        top -140px right -100px no-repeat, $white;
+        background-size: 500px;
+        padding: 0 24px;
+    }
+}
