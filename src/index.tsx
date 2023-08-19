@@ -1,10 +1,15 @@
+import 'Styles/index.scss'
+
 import App from './App'
-import React from 'react'
+import { NavMenuProvider } from 'Context'
 import ReactDOM from 'react-dom/client'
+import { StrictMode } from 'react'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+	<StrictMode>
+		<NavMenuProvider>
+			<App />
+		</NavMenuProvider>
+	</StrictMode>
 )
