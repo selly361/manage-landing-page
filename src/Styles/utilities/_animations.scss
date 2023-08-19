@@ -1,0 +1,97 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+/* Header */
+@keyframes init-header-slide {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes scroll-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scroll-out {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes navOpen {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+        visibility: hidden;
+    }
+    70% {
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        visibility: visible;
+    }
+}
+
+@keyframes navClose {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-200px);
+        visibility: hidden;
+    }
+}
+
+@keyframes itemSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes itemSlideOut {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+}
+
+
+
+
+
