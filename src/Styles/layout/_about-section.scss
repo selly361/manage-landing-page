@@ -1,0 +1,90 @@
+@use 'Styles/utilities' as *;
+
+
+.about-section {
+    height: 495px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 125px;
+    margin-top: 120px;
+
+
+    &__article {
+        height: 388px;
+        max-width: 445px;
+        display: grid;
+        gap: 16px;
+
+
+
+        &__description {
+            margin-bottom: 24px;
+            max-width: calc(100% - 95px);
+        }
+
+        &__title {
+            width: 100%;
+        }
+    }
+
+
+    &__image {
+        height: 100%;
+        width: 429px;
+        object-fit: contain;
+    }
+
+    @include breakpoint(lg) {
+        gap: 0;
+    }
+
+    @include breakpoint(md) {
+        flex-flow: column-reverse;
+        height: max-content;
+        max-width: calc(100% - 56px);
+        align-items: center;
+        margin: auto;
+        margin-top: 48px;
+
+        &__article {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            text-align: center;
+
+
+            &__title {
+                font-size: clamp(24px, 32px, 40px);
+                height: max-content;
+                line-height: 50px;
+                /* 125% */
+
+            }
+
+            &__description {
+                max-width: calc(100% - 56px);
+            }
+
+
+        }
+
+        &__image {
+            width: 100%;
+        }
+    }
+
+
+    @include breakpoint(sm) {
+        &__article {
+            max-width: 100%;
+            height: max-content;
+
+            &__description {
+                max-width: 100%;
+            }
+        }
+
+    }
+
+}
