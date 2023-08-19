@@ -1,0 +1,14 @@
+@use "Styles/utilities/mixins" as *;
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0.08%, rgba(0, 0, 0, 0.60) 99.95%);
+    z-index: 100;
+}
+
+.main {
+    min-width: 100%;
+}
