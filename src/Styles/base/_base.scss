@@ -1,11 +1,14 @@
 @use "Styles/utilities" as *;
 
+
+
 body {
     width: 100vw;
-    min-height: 100vh;
+    min-height: 400vh;
     background: url("../../../public/images/bg-tablet-pattern.svg") 
     top -240px right -150px no-repeat, $white;
-    padding: 0 165px;
+    overflow-x: hidden;
+    padding: 150px 165px 0 165px;
 }
 
 h1 {
@@ -32,11 +35,11 @@ p {
 }
 
 
-@include breakpoint(md) {
+@include breakpoint(lg) {
     body {
         background: url("../../../public/images/bg-tablet-pattern.svg") 
         top -140px right -100px no-repeat, $white;
         background-size: 500px;
-        padding: 0 24px;
+        padding: 73px 24px 0 24px;
     }
 }
