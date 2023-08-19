@@ -1,0 +1,157 @@
+@use "Styles/utilities" as *;
+
+
+.header__container {
+    width: calc(100% - 330px);
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    height: 100%;
+
+
+    @include breakpoint(md) {
+        width: calc(100% - 48px);
+    }
+}
+
+.header {
+    width: 100vw;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 400;
+
+
+    &--on-load {
+        animation: init-header-slide 1s forwards;
+    }
+
+
+    &--scroll-in {
+        @extend .header;
+        width: 100vw;
+        position: fixed;
+        margin-top: 0;
+        height: 72px;
+        background-color: #fff;
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.04);
+        animation: scroll-in 700ms ease-in-out forwards;
+
+        @include breakpoint(md) {
+            padding: 0 24px;
+        }
+    }
+
+
+    &--scroll-out {
+        animation: scroll-out 250ms ease-in-out forwards;
+    }
+
+
+    &__nav {
+        @extend .header__container;
+        margin: 0;
+        width: max-content;
+        height: max-content;
+        justify-content: unset;
+        gap: 32px;
+
+        &__anchor {
+            @include ParagraphS;
+            transition: .5s ease opacity;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.5;
+            }
+
+        }
+    }
+
+
+    &__menu-icon {
+        cursor: pointer;
+        display: none;
+        position: relative;
+        z-index: 200;
+    }
+
+}
+
+
+
+
+@include breakpoint(lg) {
+    .header__button {
+        display: none;
+    }
+}
+
+
+@include breakpoint(md) {
+
+    .header {
+
+        &__nav {
+            height: 291px;
+            width: calc(100% - 58px);
+            position: fixed;
+            visibility: hidden;
+            top: 103px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border-radius: 4px;
+            background: #FFF;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 999;
+
+            &__anchor {
+                @include ParagraphM;
+                font-weight: 700;
+                opacity: 0;
+            }
+
+
+            &--mobile--open {
+                display: flex;
+                animation: navOpen 500ms ease-in forwards;
+
+
+                a {
+                    @for $i from 1 through 5 {
+                        &:nth-child(#{$i}) {
+                            animation: itemSlideIn 500ms ease-in forwards;
+                            animation-delay: 200ms * $i;
+                        }
+                    }
+
+                }
+            }
+
+            &--mobile--close {
+                animation: navClose 700ms ease-in forwards;
+
+                a {
+                    @for $i from 1 through 5 {
+                        &:nth-child(#{$i}) {
+                            animation: itemSlideOut 700ms ease-in forwards;
+                            animation-delay: 200ms * $i;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        &__menu-icon {
+            display: block;
+        }
+    }
+}
