@@ -1,7 +1,7 @@
 import { INavMenuContext, INavMenuProps } from './NavMenu.types'
 import { createContext, useContext, useEffect, useState } from 'react'
 
-const navMenuContext = createContext<INavMenuContext>({
+const NavMenuContext = createContext<INavMenuContext>({
 	isDesktop: false,
 	isNavOpen: false,
 	toggleNav: () => {},
@@ -35,7 +35,7 @@ function NavMenuProvider({ children }: INavMenuProps) {
 	}, [isNavOpen, isDesktop])
 
 	return (
-		<navMenuContext.Provider
+		<NavMenuContext.Provider
 			value={{
 				isDesktop,
 				isNavOpen,
@@ -43,10 +43,10 @@ function NavMenuProvider({ children }: INavMenuProps) {
 			}}
 		>
 			{children}
-		</navMenuContext.Provider>
+		</NavMenuContext.Provider>
 	)
 }
 
-export const useNavMenuContext = () => useContext(navMenuContext)
+export const useNavMenuContext = () => useContext(NavMenuContext)
 
 export default NavMenuProvider
