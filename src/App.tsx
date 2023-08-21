@@ -14,8 +14,8 @@ function App() {
     <Fragment>
       <Header isScrollIn={isScrollIn} isScrollOut={isScrollOut} />
       {isNavOpen ? <div className="overlay" /> : null}
-      <main ref={containerRef} className="main">
-        <AboutSection />
+      <main className="main">
+        <AboutSection forwardedRef={containerRef} />
       </main>
     </Fragment>
   )
