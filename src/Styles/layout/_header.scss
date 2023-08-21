@@ -11,7 +11,7 @@
     height: 100%;
 
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         width: calc(100% - 48px);
     }
 }
@@ -24,11 +24,6 @@
     left: 0;
     right: 0;
     z-index: 400;
-
-
-    &--on-load {
-        animation: init-header-slide 1s forwards;
-    }
 
 
     &--scroll-in {
