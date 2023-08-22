@@ -214,7 +214,7 @@
 
         &__list {
             max-width: 100%;
-
+            min-width: 100%;
 
             &__list-item {
 
@@ -222,6 +222,23 @@
                     max-width: 100%;
                 }
             }
+        }
+    }
+
+
+    @include breakpoint(sm) {
+        &__list_list-item {
+            
+            &__ttle {
+                font-size: 20px;
+            }
+
+            &__description {
+                font-size: 14px;                
+            }
+
+
+
         }
     }
 }
