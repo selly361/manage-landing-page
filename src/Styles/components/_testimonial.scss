@@ -1,0 +1,38 @@
+@use "Styles/utilities" as *;
+
+.testimonial {
+    width: 540px;
+    height: 220px;
+    background: $gray-light;
+    position: relative;
+
+    padding: 60px 40px 40px 40px;
+    display: grid;
+    gap: 9px;
+
+    text-align: center;
+
+    &__image {
+        width: 72px;
+        height: 72px;
+        border-radius: 72px;
+
+        position: absolute;
+        inset: 0;
+        bottom: auto;
+        margin: auto;
+        transform: translateY(-50%);
+    }
+
+
+    &__name {
+        @include HeadingXS;
+        color: $blue-dark;
+    }
+
+
+    &__description {
+        @include ParagraphS;
+        color: $blue-dark;
+    }
+}
